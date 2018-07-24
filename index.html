@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>vx 2.0</title>
+    <script src="lib/min/jquery-1.11.1.min.js" type="text/javascript"></script>
+    <script src="lib/min/vx2.min.js" type="text/javascript"></script>
+    <script>
+        <!-- vx.bind测试 -->
+        var self = {
+            name:"zjl"
+        };
+        var f1 = vx.bind(self,function (age) {
+            alert(this.name + ' is ' + age);
+        },15);
+        f1(22);
+        var f2 = vx.bind(self,function (age) {
+            alert(this.name + ' is ' + age);
+        });
+        f2(22);
+
+    </script>
+</head>
+<body>
+    hello vx
+</body>
+</html>
